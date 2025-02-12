@@ -1,0 +1,123 @@
+-- CREATE DATABASE STUDENT
+
+
+SQL> Create table student(
+  2  regno varchar(20),
+  3  name varchar(50),
+  4  major varchar(20),
+  5  bdate date,
+  6  primary key (regno));
+Table created.
+
+SQL> create Table course(
+  2  course_id int,
+  3  cname varchar(30),
+  4  dept varchar(30),
+  5  primary key (course_id));
+Table created.
+
+SQL> create table enroll(
+  2  regno varchar(20),
+  3  course_id int,
+  4  sem int,
+  5  book_isbn int,
+  6  primary key (regno, course_id, sem),
+  7  foreign key (regno) references student,
+  8  foreign key (course_id) references course);
+Table created.
+
+SQL> create table text(
+  2  book_isbn int,
+  3  book_title varchar(50),
+  4  publisher varchar(50),
+  5  author varchar(50),
+  6  primary key (book_isbn));
+Table created.
+
+SQL> create table book_adoption(
+  2  course_id int,
+  3  sem int,
+  4  book_isbn int,
+  5  primary key (course_id, sem, book_isbn),
+  6  foreign key (course_id) references course,
+  7  foreign key (book_isbn) references text,
+  8  regno varchar(20),
+  9  foreign key (course_id, sem, regno) references enroll(course_id, sem, regno));
+Table created.
+
+SQL> insert into text (book_isbn, book_title, publisher, author)
+  2  values (269593, 'Database System Concepts', 'Tata McGraw Hill', 'Abraham Silberschatz');
+1 row created.
+
+SQL> insert into text (book_isbn, book_title, publisher, author)
+  2  values (356329, 'Operating System Concepts', 'Wiley', 'Abraham Silberschatz');
+1 row created.
+
+SQL> insert into text (book_isbn, book_title, publisher, author)
+  2  values (969325, 'Introduction to Algorithms', 'MIT Press', 'CLRS');
+1 row created.
+
+SQL> insert into text (book_isbn, book_title, publisher, author)
+  2  values (333527, 'Data Communications and Networking', 'Tata McGraw Hill', 'Behrouz A Forouzan');
+1 row created.
+
+SQL> insert into text (book_isbn, book_title, publisher, author)
+  2  values (527468, 'TCP/IP Protocol Suite', 'Tata McGraw Hill', 'Behrouz A Forouzan');
+1 row created.
+
+SQL> insert into text (book_isbn, book_title, publisher, author)
+  2  values (636574, 'Data and Computer Communications', 'Pearson', 'William Stallings');
+1 row created.
+
+SQL> insert into text (book_isbn, book_title, publisher, author)
+  2  values (438965, 'Cryptography and Network Security', 'Pearson', 'William Stallings');
+1 row created.
+
+SQL> insert into text (book_isbn, book_title, publisher, author)
+  2  values (547216, 'Operating Systems, Internal Principles and Design', 'Pearson', 'William Stallings');
+1 row created.
+
+SQL> insert into text (book_isbn, book_title, publisher, author)
+  2  values (766359, 'Fundamentals of Data Structures', 'MIT Press', 'Sartaj Sahani');
+1 row created.
+
+SQL> insert into text (book_isbn, book_title, publisher, author)
+  2  values (666222, 'Algorithms C++', 'MIT Press', 'Sartaj Sahani');
+1 row created.
+
+SQL> insert into student (regno, name, major, bdate) values
+  2  ('230953232', 'Abhidutta Mukund Giri', 'CCE', TO_DATE('2005-07-20', 'YYYY-MM-DD'));
+1 row created.
+
+SQL> insert into student (regno, name, major, bdate) values
+  2  ('230953241', 'Adriteyo Das', 'CCE', TO_DATE('2005-08-03', 'YYYY-MM-DD'));
+1 row created.
+
+SQL> insert into student (regno, name, major, bdate) values
+  2  ('230953212', 'Piyush', 'CSE', TO_DATE('2006-03-06', 'YYYY-MM-DD'));
+1 row created.
+
+SQL> insert into student (regno, name, major, bdate) values
+  2  ('230905698', 'Stavya Pandey', 'CSE', TO_DATE('2005-08-29', 'YYYY-MM-DD'));
+1 row created.
+
+SQL> insert into student (regno, name, major, bdate) values
+  2  ('240909562', 'Daksh Arora', 'DSE', TO_DATE('2006-07-05', 'YYYY-MM-DD'));
+1 row created.
+
+SQL> insert into student (regno, name, major, bdate) values
+  2  ('240973652', 'Sohini', 'DSE', TO_DATE('2007-01-02', 'YYYY-MM-DD'));
+1 row created.
+
+SQL> insert into student (regno, name, major, bdate) values
+  2  ('230911569', 'Kashvi Ranjan', 'IT', TO_DATE('2005-06-07', 'YYYY-MM-DD'));
+1 row created.
+
+SQL> insert into student (regno, name, major, bdate) values
+  2  ('230953092', 'Samhita Vishwanath', 'IT', TO_DATE('2004-12-02', 'YYYY-MM-DD'));
+1 row created.
+
+SQL> insert into student (regno, name, major, bdate) values
+  2  ('230959036', 'Alok Sharma', 'VLSI', TO_DATE('2004-01-02', 'YYYY-MM-DD'));
+1 row created.
+
