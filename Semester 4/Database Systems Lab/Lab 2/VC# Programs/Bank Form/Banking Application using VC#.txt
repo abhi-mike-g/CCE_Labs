@@ -1,0 +1,150 @@
+// Form 1
+
+namespace BankingApp
+{
+    public partial class Form1 : Form
+    {
+        // Sample hardcoded credentials for demo purposes
+        private string storedAccountNumber = "user123";
+        private string storedPassword = "password";
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        // Login button click event
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string accountNumber = txtAccountNumber.Text;
+            string password = txtPassword.Text;
+
+            // Check if the entered credentials match stored ones
+            if (accountNumber == storedAccountNumber && password == storedPassword)
+            {
+                // Show Account Details Form (Form2) upon successful login
+                Form2 accountForm = new Form2(accountNumber);  // Pass the account number to Form2
+                accountForm.Show();
+                this.Hide();  // Hide login form
+            }
+            else
+            {
+                MessageBox.Show("Invalid credentials, please try again.");
+            }
+        }
+
+        // Change Password button click event
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            // Implement password change functionality (for simplicity, hardcoded)
+            string newPassword = Microsoft.VisualBasic.Interaction.InputBox("Enter new password", "Change Password", "");
+            if (!string.IsNullOrEmpty(newPassword))
+            {
+                storedPassword = newPassword;
+                MessageBox.Show("Password changed successfully!");
+            }
+        }
+    }
+}
+
+// Form 2
+
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
+namespace BankingApp
+{
+    public partial class Form2 : Form
+    {
+        private string username;
+        private decimal balance;
+        private string lastAccessDate;
+        private List<string> transactions;
+
+        public Form2(string username)
+        {
+            InitializeComponent();
+            this.username = username;
+            this.balance = 1000.00M;  // Starting balance
+            this.lastAccessDate = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss");
+            this.transactions = new List<string>
+            {
+                "Deposit $100",
+                "Withdraw $50",
+                "Transfer to Beneficiary A: $200",
+                "Deposit $300",
+                "Withdraw $100"
+            };
+
+            // Display data on the form
+            lblUsername.Text = $"Username: {username}";
+            lblBalance.Text = $"Balance: ${balance}";
+            lblLastAccess.Text = $"Last Access: {lastAccessDate}";
+            lstTransactions.Items.AddRange(transactions.ToArray());
+        }
+
+        private void btnTransferMoney_Click(object sender, EventArgs e)
+        {
+            // Open money transfer form (Form3)
+            Form3 transferForm = new Form3(username, balance);
+            transferForm.Show();
+            this.Hide();  // Hide account details form
+        }
+    }
+}
+
+// Form 3
+
+using System;
+using System.Windows.Forms;
+
+namespace BankingApp
+{
+    public partial class Form3 : Form
+    {
+        private string username;
+        private decimal balance;
+
+        public Form3(string username, decimal balance)
+        {
+            InitializeComponent();
+            this.username = username;
+            this.balance = balance;
+        }
+
+        private void btnConfirmTransfer_Click(object sender, EventArgs e)
+        {
+            string beneficiary = txtBeneficiary.Text;
+            decimal amount = 0;
+            bool isValidAmount = decimal.TryParse(txtAmount.Text, out amount);
+
+            if (string.IsNullOrEmpty(beneficiary))
+            {
+                MessageBox.Show("Please enter a beneficiary.");
+                return;
+            }
+
+            if (!isValidAmount || amount <= 0)
+            {
+                MessageBox.Show("Please enter a valid amount.");
+                return;
+            }
+
+            if (amount > balance)
+            {
+                MessageBox.Show("Insufficient balance.");
+                return;
+            }
+
+            // Deduct the amount from balance and show the transfer details
+            balance -= amount;
+            MessageBox.Show($"Successfully transferred ${amount} to {beneficiary}. Current Balance: ${balance}");
+
+            // Optionally, you can update the account details with the new balance.
+            Form2 accountForm = new Form2(username); // Will need to update to pass new balance
+            accountForm.Show();
+            this.Hide();
+        }
+    }
+}
