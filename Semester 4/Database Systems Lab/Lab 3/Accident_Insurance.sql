@@ -45,7 +45,9 @@ INSERT INTO PERSON (driver_id, name, Address) VALUES
 ('LJMNY690','Luigi Mangione','Brooklyn Heihts, Brooklyn, New York City, New York- 329 504'),
 ('EJTX09','Eric Johnson','East Dallas Rd, Texas County, Texas- 959 253'),
 ('WTBG001','Bill Gates','5695 Gates Manor, Seattle, Washington-777 653'),
-('NMX017A','Walter White','308, Negro Arroyo Lane, Albuquerque, New Mexico');
+('NMX017A','Walter White','308, Negro Arroyo Lane, Albuquerque, New Mexico'),
+('KA33MLR1', 'Abhi M G', '3000, Blueberry Hills, Kadri, Mangalore'),
+('MYS99KA05', 'Mike Ross', 'Springfield, Bejai New Road, Bangalore');
 
 INSERT INTO CAR (regno, model, Years) VALUES 
 ('NY6BL8956', 'Chevrolet Corvette', 2007),
@@ -53,7 +55,9 @@ INSERT INTO CAR (regno, model, Years) VALUES
 ('CALA09', 'Miata', 2001),
 ('WT5698SEA7', 'Ford Cortina', 2007),
 ('TX89AU1', 'Ford F-150', 1996),
-('CALA007', 'Toyota Supra', 1996);
+('CALA007', 'Toyota Supra', 1996)
+('AMG999', 'Mercedes sls AMG', 2019),
+('KA19MF5432', 'Maruti 800', 1994);
 
 INSERT INTO OWNS (driver_id, regno) VALUES 
 ('LJMNY690', 'NY6BL8956'),
@@ -61,7 +65,9 @@ INSERT INTO OWNS (driver_id, regno) VALUES
 ('SLIMM308RPGDET', 'CALA09'),
 ('WTBG001', 'WT5698SEA7'),
 ('EJTX09', 'TX89AU1'),
-('NMX017A', 'CALA007');
+('NMX017A', 'CALA007'),
+('KA33MLR1', 'AMG999'),
+('MYS99KA05', 'KA19MF5432');
 
 INSERT INTO ACCIDENT (report_number, accd_date, location) VALUES 
 (42, '2016-03-02', 'East Texas Highway'),
