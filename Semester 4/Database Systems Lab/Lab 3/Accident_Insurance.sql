@@ -75,7 +75,7 @@ INSERT INTO ACCIDENT (report_number, accd_date, location) VALUES
 (562, '2001-09-29', 'Mexico Gate'),
 (56, '2008-12-05', 'Brooklyn Bridge'),
 (972, '2008-04-13', 'Park Avenue'),
-(342, '2007-06-09', 'Alabama County Exit');
+(342, '2008-06-09', 'Alabama County Exit');
 
 INSERT INTO PARTICIPATED (driver_id, regno, report_number, damage_amount) VALUES 
 ('WTBG001', 'WT5698SEA7', 42, 72000),
