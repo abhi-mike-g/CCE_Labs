@@ -55,7 +55,7 @@ INSERT INTO CAR (regno, model, Years) VALUES
 ('CALA09', 'Miata', 2001),
 ('WT5698SEA7', 'Ford Cortina', 2007),
 ('TX89AU1', 'Ford F-150', 1996),
-('CALA007', 'Toyota Supra', 1996)
+('CALA007', 'Toyota Supra', 1996),
 ('AMG999', 'Mercedes sls AMG', 2019),
 ('KA19MF5432', 'Maruti 800', 1994);
 
@@ -76,7 +76,6 @@ INSERT INTO ACCIDENT (report_number, accd_date, location) VALUES
 (56, '2008-12-05', 'Brooklyn Bridge'),
 (972, '2008-04-13', 'Park Avenue'),
 (342, '2007-06-09', 'Alabama County Exit');
-
 
 INSERT INTO PARTICIPATED (driver_id, regno, report_number, damage_amount) VALUES 
 ('WTBG001', 'WT5698SEA7', 42, 72000),
