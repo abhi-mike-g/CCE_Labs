@@ -68,7 +68,8 @@ INSERT INTO ACCIDENT (report_number, accd_date, location) VALUES
 (13, '2005-07-02', 'Chicago Street'),
 (562, '2001-09-29', 'Mexico Gate'),
 (56, '2008-12-05', 'Brooklyn Bridge'),
-(972, '2008-04-13', 'Park Avenue');
+(972, '2008-04-13', 'Park Avenue'),
+(342, '2007-06-09', 'Alabama County Exit');
 
 
 INSERT INTO PARTICIPATED (driver_id, regno, report_number, damage_amount) VALUES 
@@ -79,5 +80,6 @@ INSERT INTO PARTICIPATED (driver_id, regno, report_number, damage_amount) VALUES
 ('NMX017A', 'CALA007', 562, 6000),
 ('SLIMM308RPGDET', 'CALA09', 56, 4000),
 ('NMX017A', 'CALA007', 972, 6000),
-('LJMNY690', 'NY6BL8956', 972, 6000);
-
+('LJMNY690', 'NY6BL8956', 972, 6000),
+('NMX017A', 'CALA007', 342, 2000),
+('SLIMM308RPGDET', 'CALA09', 342, 700);
