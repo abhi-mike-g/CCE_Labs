@@ -66,3 +66,24 @@ INSERT INTO student (regno, name, major, bdate) VALUES
 ('230911569', 'Kashvi Ranjan', 'IT', '2005-06-07'),
 ('230953092', 'Samhita Vishwanath', 'IT', '2004-12-02'),
 ('230959096', 'Alok Sharma', 'VLSI', '2004-01-02');
+
+INSERT INTO COURSE (course_id, cname, dept) VALUES 
+(2222, 'DAA', 'ICT'),
+(2225, 'DBMS', 'ICT'),
+(2252, 'CNP', 'ICT'),
+(2122, 'DS', 'ICT'),
+(2342, 'PDC', 'ICT'),
+(2255, 'OS', 'ICT'),
+(2253, 'ESD', 'ICT'),
+(2174, 'SDT', 'ICT'),
+(3222, 'DAA', 'CSE'),
+(3252, 'OS', 'CSE'),
+(3122, 'DS', 'CSE'),
+(3695, 'QC', 'CSE'),
+(3225, 'DBS', 'CSE'),
+(4123, 'OS', 'VLSI'),
+(4166, 'CNP', 'VLSI'),
+(5179, 'DV', 'DSE'),
+(5122, 'DS', 'DSE'),
+(5164, 'DM', 'DSE'),
+(5155, 'AP', 'DSE');
