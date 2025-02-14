@@ -36,11 +36,10 @@ CREATE TABLE book_adoption(
     course_id int,
     sem int,
     book_isbn int,
-    regno varchar(20),
     primary key (course_id, sem, book_isbn),
     foreign key (course_id) references course,
     foreign key (book_isbn) references text,
-    foreign key (regno, course_id, sem) references enroll(regno, course_id, sem) -- Corrected foreign key
+    foreign key (course_id, sem) references enroll(course_id, sem) -- Corrected foreign key
 );
 
 -- Insert Data (Sample)
@@ -87,3 +86,17 @@ INSERT INTO COURSE (course_id, cname, dept) VALUES
 (5122, 'DS', 'DSE'),
 (5164, 'DM', 'DSE'),
 (5155, 'AP', 'DSE');
+
+INSERT INTO ENROLL (regno, course_id, sem, book_isbn) VALUES 
+    ('230953232', 2222, 4, 969325),
+    ('230953092', 2222, 4, 969325),
+    ('230911569', 2222, 5, 969325),
+    ('230911569', 2253, 5, 438965),
+    ('230911569', 5164, 5, 636574),
+    ('240909562', 5122, 2, 636574),
+    ('240909562', 5179, 4, 333527),
+    ('240909562', 3695, 2, 969325),
+    ('230959096', 4123, 4, 969325),
+    ('240909562', 4166, 4, 969325);
+
+-- INSERT INTO book_adoption ()
