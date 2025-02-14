@@ -14,14 +14,15 @@ CREATE TABLE course(
     primary key (course_id)
 );
 
-CREATE TABLE enroll(
-    regno varchar(20),
+CREATE TABLE book_adoption(
     course_id int,
     sem int,
     book_isbn int,
-    primary key (regno, course_id, sem),
-    foreign key (regno) references student,
-    foreign key (course_id) references course
+    regno varchar(20),
+    primary key (course_id, sem, book_isbn),
+    foreign key (course_id) references course,
+    foreign key (book_isbn) references text,
+    foreign key (regno, course_id, sem) references enroll(regno, course_id, sem) -- ✅ Corrected column order
 );
 
 CREATE TABLE text(
