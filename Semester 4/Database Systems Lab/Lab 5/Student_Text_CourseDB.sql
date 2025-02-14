@@ -52,7 +52,7 @@ INSERT INTO text (book_isbn, book_title, publisher, author) VALUES
 (527468, 'TCP/IP Protocol Suite', 'Tata McGraw Hill', 'Behrouz A Forouzan'),
 (438965, 'Cryptography and Network Security', 'Pearson', 'William Stallings'),
 (636574, 'Data and Computer Communications', 'Pearson', 'William Stallings'),
-(547216, 'Operating Systems, Internal principles and design', 'Pearson', 'William Stallings')
+(547216, 'Operating Systems, Internal principles and design', 'Pearson', 'William Stallings'),
 (766359, 'Fundamentals of Data Structures', 'MIT Press', 'Sartaj Sahani'),
 (666222, 'Algorithms C++', 'MIT Press', 'Sartaj Sahani');
 
