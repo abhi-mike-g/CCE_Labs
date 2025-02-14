@@ -7,6 +7,16 @@ CREATE TABLE student(
     primary key (regno)
 );
 
+CREATE TABLE enroll(
+    regno varchar(20),
+    course_id int,
+    sem int,
+    book_isbn int,
+    primary key (regno, course_id, sem),
+    foreign key (regno) references student,
+    foreign key (course_id) references course
+);
+
 CREATE TABLE course(
     course_id int,
     cname varchar(30),
