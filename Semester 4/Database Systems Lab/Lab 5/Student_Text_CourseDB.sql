@@ -100,4 +100,13 @@ INSERT INTO ENROLL (regno, course_id, sem, book_isbn) VALUES
     ('230959096', 4123, 4, 969325),
     ('240909562', 4166, 4, 969325);
 
--- INSERT INTO book_adoption ()
+INSERT INTO Book_adoption (course_id, sem, book_isbn) VALUES 
+	(2225, 4, 269593),
+    (3225, 4, 269593),
+    (2255, 4, 356329),
+    (2255, 4, 547216),
+    (3252, 4, 356329),
+    (3252, 4, 547216),
+    (4123, 4, 547216),
+    (4123, 4, 636574),
+    (2222, 4, 969325);
