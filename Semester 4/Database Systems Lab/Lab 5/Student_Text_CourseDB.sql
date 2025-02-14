@@ -33,16 +33,6 @@ CREATE TABLE text(
     primary key (book_isbn)
 );
 
-CREATE TABLE book_adoption(
-    course_id int,
-    sem int,
-    book_isbn int,
-    primary key (course_id, sem, book_isbn),
-    foreign key (course_id) references course,
-    foreign key (book_isbn) references text,
-    foreign key (course_id, sem) references enroll(course_id, sem) -- Corrected foreign key
-);
-
 -- Insert Data (Sample)
 INSERT INTO text (book_isbn, book_title, publisher, author) VALUES 
 (269593, 'Database System Concepts', 'Tata McGraw Hill', 'Abraham Silberschatz'),
