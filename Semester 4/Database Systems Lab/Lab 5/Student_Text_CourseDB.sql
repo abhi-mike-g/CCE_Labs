@@ -7,6 +7,13 @@ CREATE TABLE student(
     primary key (regno)
 );
 
+CREATE TABLE course(
+    course_id int,
+    cname varchar(30),
+    dept varchar(30),
+    primary key (course_id)
+);
+
 CREATE TABLE enroll(
     regno varchar(20),
     course_id int,
@@ -17,11 +24,12 @@ CREATE TABLE enroll(
     foreign key (course_id) references course
 );
 
-CREATE TABLE course(
-    course_id int,
-    cname varchar(30),
-    dept varchar(30),
-    primary key (course_id)
+CREATE TABLE text(
+    book_isbn int,
+    book_title varchar(50),
+    publisher varchar(50),
+    author varchar(50),
+    primary key (book_isbn)
 );
 
 CREATE TABLE book_adoption(
@@ -33,14 +41,6 @@ CREATE TABLE book_adoption(
     foreign key (course_id) references course,
     foreign key (book_isbn) references text,
     foreign key (regno, course_id, sem) references enroll(regno, course_id, sem)
-);
-
-CREATE TABLE text(
-    book_isbn int,
-    book_title varchar(50),
-    publisher varchar(50),
-    author varchar(50),
-    primary key (book_isbn)
 );
 
 -- Insert Data (Sample)
@@ -100,13 +100,14 @@ INSERT INTO ENROLL (regno, course_id, sem, book_isbn) VALUES
     ('230959096', 4123, 4, 969325),
     ('240909562', 4166, 4, 969325);
 
-INSERT INTO Book_adoption (course_id, sem, book_isbn) VALUES 
-	(2225, 4, 269593),
-    (3225, 4, 269593),
-    (2255, 4, 356329),
-    (2255, 4, 547216),
-    (3252, 4, 356329),
-    (3252, 4, 547216),
-    (4123, 4, 547216),
-    (4123, 4, 636574),
-    (2222, 4, 969325);
+INSERT INTO Book_adoption (course_id, sem, book_isbn, regno) VALUES 
+    (2225, 4, 269593, '230953232'),
+    (3225, 4, 269593, '230953092'),
+    (2255, 4, 356329, '230911569'),
+    (2255, 4, 547216, '230911569'),
+    (3252, 4, 356329, '230911569'),
+    (3252, 4, 547216, '230911569'),
+    (4123, 4, 547216, '230959096'),
+    (4123, 4, 636574, '230959096'),
+    (2222, 4, 969325, '230953232');
+
