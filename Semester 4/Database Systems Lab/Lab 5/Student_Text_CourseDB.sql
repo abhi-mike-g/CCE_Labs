@@ -22,7 +22,7 @@ CREATE TABLE book_adoption(
     primary key (course_id, sem, book_isbn),
     foreign key (course_id) references course,
     foreign key (book_isbn) references text,
-    foreign key (regno, course_id, sem) references enroll(regno, course_id, sem) -- ✅ Corrected column order
+    foreign key (regno, course_id, sem) references enroll(regno, course_id, sem)
 );
 
 CREATE TABLE text(
