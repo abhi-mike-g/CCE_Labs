@@ -1,0 +1,10 @@
+#!/bin/bash
+
+directory = "${1:-.}"
+
+if [! -d "$directory"]; then
+	    echo "The specified folder does not exist."
+    exit 1
+f
+
+
