@@ -88,3 +88,6 @@ INSERT INTO PARTICIPATED (driver_id, regno, report_number, damage_amount) VALUES
 ('LJMNY690', 'NY6BL8956', 972, 6000),
 ('NMX017A', 'CALA007', 342, 2000),
 ('SLIMM308RPGDET', 'CALA09', 342, 700);
+
+-- for triggers in Lab 7
+ALTER TABLE ACCIDENT ADD (total_damage INT DEFAULT 0);
