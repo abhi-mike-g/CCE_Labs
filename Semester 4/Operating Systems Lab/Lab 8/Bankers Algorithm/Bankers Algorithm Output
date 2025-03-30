@@ -1,0 +1,36 @@
+student@MIT-ICT-L10-26:~/230953232_AMG/OS_Lab8/Bankers Algorithms$ gcc -o Banker Banker.c
+student@MIT-ICT-L10-26:~/230953232_AMG/OS_Lab8/Bankers Algorithms$ ./Banker
+Enter the number of processes: 3
+Enter the number of resources: 3
+Enter available resources:
+Resource 0: 3
+Resource 1: 2
+Resource 2: 2
+Enter maximum resources required by each process:
+Max resources for process 0, resource 0: 7
+Max resources for process 0, resource 1: 5
+Max resources for process 0, resource 2: 3
+Max resources for process 1, resource 0: 3
+Max resources for process 1, resource 1: 2
+Max resources for process 1, resource 2: 2
+Max resources for process 2, resource 0: 9
+Max resources for process 2, resource 1: 0
+Max resources for process 2, resource 2: 2
+Enter allocated resources for each process:
+Allocated resources for process 0, resource 0: 3
+Allocated resources for process 0, resource 1: 2
+Allocated resources for process 0, resource 2: 2
+Allocated resources for process 1, resource 0: 2
+Allocated resources for process 1, resource 1: 1
+Allocated resources for process 1, resource 2: 1
+Allocated resources for process 2, resource 0: 3
+Allocated resources for process 2, resource 1: 2
+Allocated resources for process 2, resource 2: 2
+System is in a safe state.
+Enter the process ID to request resources: 1
+Enter the request for resources:
+Resource 0: 1
+Resource 1: 0
+Resource 2: 2
+Error: Process has exceeded its maximum claim.
+student@MIT-ICT-L10-26:~/230953232_AMG/OS_Lab8/Bankers Algorithms$ 
