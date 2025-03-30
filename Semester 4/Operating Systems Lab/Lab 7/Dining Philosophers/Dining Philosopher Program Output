@@ -1,0 +1,16 @@
+student@MIT-ICT-L10-26:~/230953232_AMG/OS_Lab7/Dining_Philosophers$ ./Dining_Philosophers
+Philosopher 1 is thinking.
+Philosopher 0 is thinking.
+Philosopher 2 is thinking.
+Philosopher 3 is thinking.
+Philosopher 4 is thinking.
+Philosopher 1 is eating.
+Philosopher 3 is eating.
+Philosopher 1 is thinking.
+Philosopher 0 is eating.
+Philosopher 3 is thinking.
+Philosopher 2 is eating.
+Philosopher 0 is thinking.
+Philosopher 4 is eating.
+Philosopher 2 is thinking.
+Philosopher 1 is eating.
