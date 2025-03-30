@@ -1,0 +1,2 @@
+gcc -o Bounded_Buffer Bounded_Buffer.c -lpthread -lrt
+gcc -o Bounded_Buffer Bounded_Buffer.c -lpthread -lrt

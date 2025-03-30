@@ -1,0 +1,22 @@
+$gcc -o Bounded_Buffer Bounded_Buffer.c -lpthread -lrt
+$./Bounded_BUffer
+Produced: 0 at index 0
+Produced: 1 at index 1
+Consumed: 0 from index 0
+Produced: 2 at index 2
+Consumed: 1 from index 1
+Produced: 3 at index 3
+Produced: 4 at index 4
+Produced: 5 at index 0
+Consumed: 2 from index 2
+Produced: 6 at index 1
+Produced: 7 at index 2
+Consumed: 3 from index 3
+Consumed: 4 from index 4
+Produced: 8 at index 3
+Produced: 9 at index 4
+Consumed: 5 from index 0
+Consumed: 6 from index 1
+Consumed: 7 from index 2
+Consumed: 8 from index 3
+Consumed: 9 from index 4
