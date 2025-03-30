@@ -1,0 +1,25 @@
+student@MIT-ICT-L10-26:~/230953232_AMG/OS_Lab8/Deadlock_Detection$ dir
+Deadlock_Detect.c
+student@MIT-ICT-L10-26:~/230953232_AMG/OS_Lab8/Deadlock_Detection$ gcc -o Deadlock_Detect Deadlock_Detect.c 
+student@MIT-ICT-L10-26:~/230953232_AMG/OS_Lab8/Deadlock_Detection$ ./Deadlock_Detect 
+Enter the number of processes: 3
+Enter the number of resources: 2
+Enter available resources:
+Resource 0: 3
+Resource 1: 3
+Enter maximum resources required by each process:
+Max resources for process 0, resource 0: 7
+Max resources for process 0, resource 1: 5
+Max resources for process 1, resource 0: 3 
+Max resources for process 1, resource 1: 2
+Max resources for process 2, resource 0: 9
+Max resources for process 2, resource 1: 0
+Enter allocated resources for each process:
+Allocated resources for process 0, resource 0: 3
+Allocated resources for process 0, resource 1: 2
+Allocated resources for process 1, resource 0: 2
+Allocated resources for process 1, resource 1: 1
+Allocated resources for process 2, resource 0: 5
+Allocated resources for process 2, resource 1: 0
+The system is not in a deadlock state.
+student@MIT-ICT-L10-26:~/230953232_AMG/OS_Lab8/Deadlock_Detection$ 
