@@ -1,0 +1,12 @@
+student@MIT-ICT-L10-26:~/230953232_AMG/OS_Lab7$ cd Reader_Writer/
+student@MIT-ICT-L10-26:~/230953232_AMG/OS_Lab7/Reader_Writer$ ./Reader_Writer 
+Reader 0 is reading the resource
+Reader 1 is reading the resource
+Reader 2 is reading the resource
+Reader 3 is reading the resource
+Reader 4 is reading the resource
+Writer 0 is writing to the resource
+Writer 1 is writing to the resource
+Writer 2 is writing to the resource
+Writer 3 is writing to the resource
+Writer 4 is writing to the resource
