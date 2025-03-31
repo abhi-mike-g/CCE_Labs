@@ -1,0 +1,40 @@
+// First Fit Output
+Enter total memory size: 600
+Select allocation strategy:
+1. First Fit
+2. Best Fit
+Enter your choice: 1
+Enter the number of processes: 5
+Enter memory required for process 1: 40
+Process 1 allocated at address 0
+Enter memory required for process 2: 150
+Process 2 allocated at address 40
+Enter memory required for process 3: 60
+Process 3 allocated at address 190
+Enter memory required for process 4: 200
+Process 4 allocated at address 250
+Enter memory required for process 5: 20
+Process 5 allocated at address 450
+
+Final Free Memory Blocks:
+Start: 470, Size: 130
+
+
+//Best Fit Output
+Enter total memory size: 600
+Select allocation strategy:
+1. First Fit
+2. Best Fit
+Enter your choice: 2
+Enter the number of processes: 4
+Enter memory required for process 1: 200
+Process 1 allocated at address 0
+Enter memory required for process 2: 150
+Process 2 allocated at address 200
+Enter memory required for process 3: 80
+Process 3 allocated at address 350
+Enter memory required for process 4: 240
+Process 4: Not enough memory to allocate 240 units
+
+Final Free Memory Blocks:
+Start: 430, Size: 170
