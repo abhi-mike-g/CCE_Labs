@@ -1,0 +1,17 @@
+Enter number of frames: 5
+Enter number of pages in the reference string: 9
+Enter the page reference string (space-separated):
+3 2 6 7 1 2 4 3 7 9 5
+
+--- LRU Page Replacement Simulation ---
+Processing page 3: Fault! Frames: 3 - - - -
+Processing page 2: Fault! Frames: 3 2 - - -
+Processing page 6: Fault! Frames: 3 2 6 - -
+Processing page 7: Fault! Frames: 3 2 6 7 -
+Processing page 1: Fault! Frames: 3 2 6 7 1
+Processing page 2: Hit! Frames: 3 2 6 7 1
+Processing page 4: Fault! Frames: 4 2 6 7 1
+Processing page 3: Fault! Frames: 4 2 3 7 1
+Processing page 7: Hit! Frames: 4 2 3 7 1
+
+Total Page Faults: 7
