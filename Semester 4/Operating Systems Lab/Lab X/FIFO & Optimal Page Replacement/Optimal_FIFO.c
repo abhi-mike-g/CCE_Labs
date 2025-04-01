@@ -3,58 +3,6 @@
 #include <limits.h>
 #include <stdbool.h>
 
-// Function prototypes
-int simulateFIFO(int *pages, int n, int frameCount);
-int simulateOptimal(int *pages, int n, int frameCount);
-bool isPresent(int *frames, int frameCount, int page);
-
-int main() {
-    int frameCount, n, choice;
-
-    // Get frame allocation from user
-    printf("Enter number of frames: ");
-    scanf("%d", &frameCount);
-
-    // Get the number of pages in the reference string
-    printf("Enter number of pages in the reference string: ");
-    scanf("%d", &n);
-
-    // Dynamically allocate array for the page reference string
-    int *pages = (int *)malloc(n * sizeof(int));
-    if (pages == NULL) {
-        perror("Memory allocation failed");
-        exit(1);
-    }
-
-    printf("Enter the page reference string (space-separated):\n");
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &pages[i]);
-    }
-
-    // Choose algorithm to simulate
-    printf("Select Page Replacement Algorithm:\n");
-    printf("1. FIFO\n");
-    printf("2. Optimal\n");
-    printf("Enter your choice: ");
-    scanf("%d", &choice);
-
-    int faults = 0;
-    if (choice == 1) {
-        faults = simulateFIFO(pages, n, frameCount);
-    } else if (choice == 2) {
-        faults = simulateOptimal(pages, n, frameCount);
-    } else {
-        printf("Invalid choice.\n");
-        free(pages);
-        exit(1);
-    }
-
-    printf("\nTotal Page Faults: %d\n", faults);
-
-    free(pages);
-    return 0;
-}
-
 // Checks if page is already in frames, returns true if found
 bool isPresent(int *frames, int frameCount, int page) {
     for (int i = 0; i < frameCount; i++) {
@@ -66,7 +14,7 @@ bool isPresent(int *frames, int frameCount, int page) {
 }
 
 // FIFO Page Replacement Simulation
-int simulateFIFO(int *pages, int n, int frameCount) {
+int FIFO(int *pages, int n, int frameCount) {
     int faults = 0;
 
     // Dynamically allocate array for frames and initialize to -1 (empty)
@@ -107,7 +55,7 @@ int simulateFIFO(int *pages, int n, int frameCount) {
 }
 
 // Optimal Page Replacement Simulation
-int simulateOptimal(int *pages, int n, int frameCount) {
+int Optimal(int *pages, int n, int frameCount) {
     int faults = 0;
 
     // Dynamically allocate array for frames and initialize to -1 (empty)
@@ -173,7 +121,54 @@ int simulateOptimal(int *pages, int n, int frameCount) {
         }
         printf("\n");
     }
-
     free(frames);
     return faults;
+}
+
+
+int main() {
+    int frameCount, n, choice;
+
+    // Get frame allocation from user
+    printf("Enter number of frames: ");
+    scanf("%d", &frameCount);
+
+    // Get the number of pages in the reference string
+    printf("Enter number of pages in the reference string: ");
+    scanf("%d", &n);
+
+    // Dynamically allocate array for the page reference string
+    int *pages = (int *)malloc(n * sizeof(int));
+    if (pages == NULL) {
+        perror("Memory allocation failed");
+        exit(1);
+    }
+
+    printf("Enter the page reference string (space-separated):\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &pages[i]);
+    }
+
+    // Choose algorithm to simulate
+    printf("Select Page Replacement Algorithm:\n");
+    printf("1. FIFO\n");
+    printf("2. Optimal\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    int faults = 0;
+    if (choice == 1) {
+        faults = FIFO(pages, n, frameCount);
+    } else if (choice == 2) {
+        faults = Optimal(pages, n, frameCount);
+    } else {
+        printf("Invalid choice.\n");
+        free(pages);
+        exit(1);
+    }
+
+    printf("\nTotal Page Faults: %d\n", faults);
+
+    free(pages);
+    return 0;
 }
