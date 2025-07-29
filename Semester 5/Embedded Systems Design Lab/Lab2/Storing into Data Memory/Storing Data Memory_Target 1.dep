@@ -1,0 +1,2 @@
+Dependencies for Project 'Storing Data Memory', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Storing_Address_in_Data_Memory.s)(0x688854AE)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\NXP\LPC17xx --list "Storing_Address_in_Data_Memory.lst" --xref -o "Storing_Address_in_Data_Memory.o" --depend "Storing_Address_in_Data_Memory.d")

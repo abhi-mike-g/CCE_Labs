@@ -1,0 +1,186 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, DATA, READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode, CODE, READONLY
+    8 00000000         ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         
+   11 00000000         Reset_Handler
+   12 00000000 481A            LDR              R0, =SRC
+   13 00000002 491B            LDR              R1, =DST
+   14 00000004         
+   15 00000004 6903            LDR              R3, [R0, #16]
+   16 00000006 F841 3B04       STR              R3, [R1], #4
+   17 0000000A         
+   18 0000000A F100 041C       ADD              R4, R0, #(7 * 4)
+   19 0000000E 6823            LDR              R3, [R4]
+   20 00000010 F841 3B04       STR              R3, [R1], #4
+   21 00000014         
+   22 00000014 F100 0508       ADD              R5, R0, #(2 * 4)
+   23 00000018 682B            LDR              R3, [R5]
+   24 0000001A F841 3B04       STR              R3, [R1], #4
+   25 0000001E         
+   26 0000001E F100 0624       ADD              R6, R0, #(9 * 4)
+   27 00000022 6833            LDR              R3, [R6]
+   28 00000024 F841 3B04       STR              R3, [R1], #4
+   29 00000028         
+   30 00000028 6803            LDR              R3, [R0, #0]
+   31 0000002A F841 3B04       STR              R3, [R1], #4
+   32 0000002E         
+   33 0000002E 68C3            LDR              R3, [R0, #12]
+   34 00000030 F841 3B04       STR              R3, [R1], #4
+   35 00000034         
+   36 00000034 6983            LDR              R3, [R0, #24]
+   37 00000036 F841 3B04       STR              R3, [R1], #4
+   38 0000003A         
+   39 0000003A 6843            LDR              R3, [R0, #4]
+   40 0000003C F841 3B04       STR              R3, [R1], #4
+   41 00000040         
+   42 00000040 E7FE    STOP    B                STOP
+   43 00000042         
+   44 00000042 00 00 12345678 
+              ABCDEF01 
+              A2BC4EF1 
+              32546710 
+              22222222 
+              CFDAB234 
+              89754321 
+              10001001 
+              ABBCFD13 
+              00001000 SRC     DCD              0x12345678, 0xABCDEF01, 0xA2BC4
+EF1, 0x32546710, 0x22222222, 0xCFDAB234, 0x89754321, 0x10001001, 0xABBCFD13, 0x
+00001000
+   45 0000006C         
+   46 0000006C 00000000 
+              00000000         AREA             DATASEG, DATA, READWRITE
+   47 00000000 00 00 00 
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00       DST     SPACE            40
+   48 00000028         
+   49 00000028                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=Storing_
+Address_in_Data_Memory.d -oStoring_Address_in_Data_Memory.o -IC:\Keil\ARM\RV31\
+INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EV
+AL SETA 1" --list=Storing_Address_in_Data_Memory.lst Storing_Address_in_Data_Me
+mory.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file Storing_Address_in_Data_Memory.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file Storing_Address_in_Data_Memory.s
+   Uses
+      At line 2 in file Storing_Address_in_Data_Memory.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 8 in file Storing_Address_in_Data_Memory.s
+   Uses
+      None
+Comment: ENTRY unused
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 11 in file Storing_Address_in_Data_Memory.s
+   Uses
+      At line 5 in file Storing_Address_in_Data_Memory.s
+      At line 9 in file Storing_Address_in_Data_Memory.s
+
+SRC 00000044
+
+Symbol: SRC
+   Definitions
+      At line 44 in file Storing_Address_in_Data_Memory.s
+   Uses
+      At line 12 in file Storing_Address_in_Data_Memory.s
+Comment: SRC used once
+STOP 00000040
+
+Symbol: STOP
+   Definitions
+      At line 42 in file Storing_Address_in_Data_Memory.s
+   Uses
+      At line 42 in file Storing_Address_in_Data_Memory.s
+Comment: STOP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file Storing_Address_in_Data_Memory.s
+   Uses
+      None
+Comment: mycode unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DATASEG 00000000
+
+Symbol: DATASEG
+   Definitions
+      At line 46 in file Storing_Address_in_Data_Memory.s
+   Uses
+      None
+Comment: DATASEG unused
+DST 00000000
+
+Symbol: DST
+   Definitions
+      At line 47 in file Storing_Address_in_Data_Memory.s
+   Uses
+      At line 13 in file Storing_Address_in_Data_Memory.s
+Comment: DST used once
+2 symbols
+342 symbols in table
