@@ -1,0 +1,2 @@
+Dependencies for Project 'Pre_Index_without_WriteBack', Target 'Target 1': (DO NOT MODIFY !)
+F (.\No_WriteBack_Pre_Index.s)(0x68884C08)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\NXP\LPC17xx --list "No_WriteBack_Pre_Index.lst" --xref -o "No_WriteBack_Pre_Index.o" --depend "No_WriteBack_Pre_Index.d")

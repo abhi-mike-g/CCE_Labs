@@ -1,0 +1,19 @@
+*** Creating Trace Output File 'Pre_Index_without_WriteBack.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"no_writeback_pre_index.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "no_writeback_pre_index.o" 
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x10000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Pre_Index_without_WriteBack.map" -o Pre_Index_without_WriteBack.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'Pre_Index_without_WriteBack.axf'
+### ADS-LD Command File: 'Pre_Index_without_WriteBack.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'Pre_Index_without_WriteBack.lnp', Handle=0x00000EBC
+### Writing '.lnp' file
+### ADS-LD Command file 'Pre_Index_without_WriteBack.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
