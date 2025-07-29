@@ -1,0 +1,19 @@
+*** Creating Trace Output File 'LOOPER_Transfer.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"looper_transfer.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "looper_transfer.o" 
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x10000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\LOOPER_Transfer.map" -o LOOPER_Transfer.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'LOOPER_Transfer.axf'
+### ADS-LD Command File: 'LOOPER_Transfer.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'LOOPER_Transfer.lnp', Handle=0x0000078C
+### Writing '.lnp' file
+### ADS-LD Command file 'LOOPER_Transfer.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

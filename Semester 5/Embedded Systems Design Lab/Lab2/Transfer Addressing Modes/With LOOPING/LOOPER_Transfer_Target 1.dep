@@ -1,0 +1,2 @@
+Dependencies for Project 'LOOPER_Transfer', Target 'Target 1': (DO NOT MODIFY !)
+F (.\LOOPER_Transfer.s)(0x68884D23)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\NXP\LPC17xx --list "LOOPER_Transfer.lst" --xref -o "LOOPER_Transfer.o" --depend "LOOPER_Transfer.d")
