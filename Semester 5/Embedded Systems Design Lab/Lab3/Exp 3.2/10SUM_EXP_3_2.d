@@ -1,0 +1,1 @@
+10SUM_EXP_3_2.o: 10SUM_EXP_3_2.s

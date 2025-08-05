@@ -1,0 +1,2 @@
+Dependencies for Project 'Exp3_2', Target 'Target 1': (DO NOT MODIFY !)
+F (.\10SUM_EXP_3_2.s)(0x68917BEE)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\NXP\LPC17xx --list "10SUM_EXP_3_2.lst" --xref -o "10SUM_EXP_3_2.o" --depend "10SUM_EXP_3_2.d")
