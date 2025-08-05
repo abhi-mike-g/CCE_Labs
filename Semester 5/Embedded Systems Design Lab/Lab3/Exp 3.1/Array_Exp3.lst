@@ -1,0 +1,140 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, DATA, READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0X10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008         
+    8 00000008                 AREA             mycide, CODE, READONLY
+    9 00000000                 ENTRY
+   10 00000000                 EXPORT           Reset_Handler
+   11 00000000         
+   12 00000000         Reset_Handler
+   13 00000000 4807            LDR              R0, =SRC
+   14 00000002 F100 0124       ADD              R1, R0, #36
+   15 00000006 F04F 0405       MOV              R4, #5
+   16 0000000A         
+   17 0000000A         UP
+   18 0000000A 6802            LDR              R2, [R0]
+   19 0000000C 680B            LDR              R3, [R1]
+   20 0000000E 6003            STR              R3, [R0]
+   21 00000010 600A            STR              R2, [R1]
+   22 00000012         
+   23 00000012 F100 0004       ADD              R0, R0, #4
+   24 00000016 F1A1 0104       SUB              R1, R1, #4
+   25 0000001A         
+   26 0000001A 1E64            SUBS             R4, R4, #1
+   27 0000001C D1F5            BNE              UP
+   28 0000001E         
+   29 0000001E E7FE    STOP    B                STOP
+   30 00000020         
+   31 00000020 00000000        AREA             READDATA, DATA, READWRITE
+   32 00000000 15644621 
+              15649653 
+              15648643 
+              15649531 
+              15646879 
+              15660837 
+              15647153 
+              15646180 
+              15649753 
+              15646984 SRC     DCD              0x15644621,0x15649653,0x1564864
+3,0x15649531,0x15646879, 0x15660837,0x15647153,0x15646180,0x15649753,0x15646984
+                       
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=Array_Ex
+p3.d -oArray_Exp3.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Kei
+l\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=Array_Exp3.lst Array_E
+xp3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file Array_Exp3.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file Array_Exp3.s
+   Uses
+      At line 2 in file Array_Exp3.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 12 in file Array_Exp3.s
+   Uses
+      At line 5 in file Array_Exp3.s
+      At line 10 in file Array_Exp3.s
+
+STOP 0000001E
+
+Symbol: STOP
+   Definitions
+      At line 29 in file Array_Exp3.s
+   Uses
+      At line 29 in file Array_Exp3.s
+Comment: STOP used once
+UP 0000000A
+
+Symbol: UP
+   Definitions
+      At line 17 in file Array_Exp3.s
+   Uses
+      At line 27 in file Array_Exp3.s
+Comment: UP used once
+mycide 00000000
+
+Symbol: mycide
+   Definitions
+      At line 8 in file Array_Exp3.s
+   Uses
+      None
+Comment: mycide unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+READDATA 00000000
+
+Symbol: READDATA
+   Definitions
+      At line 31 in file Array_Exp3.s
+   Uses
+      None
+Comment: READDATA unused
+SRC 00000000
+
+Symbol: SRC
+   Definitions
+      At line 32 in file Array_Exp3.s
+   Uses
+      At line 13 in file Array_Exp3.s
+Comment: SRC used once
+2 symbols
+341 symbols in table
