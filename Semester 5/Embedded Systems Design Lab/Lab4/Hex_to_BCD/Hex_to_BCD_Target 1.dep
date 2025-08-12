@@ -1,0 +1,2 @@
+Dependencies for Project 'Hex_to_BCD', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Hex_to_BCD.s)(0x689AC49B)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\NXP\LPC17xx --list "Hex_to_BCD.lst" --xref -o "Hex_to_BCD.o" --depend "Hex_to_BCD.d")

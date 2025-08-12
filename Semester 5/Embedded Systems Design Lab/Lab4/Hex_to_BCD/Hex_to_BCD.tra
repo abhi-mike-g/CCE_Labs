@@ -1,0 +1,19 @@
+*** Creating Trace Output File 'Hex_to_BCD.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"hex_to_bcd.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "hex_to_bcd.o" 
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x10000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Hex_to_BCD.map" -o Hex_to_BCD.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'Hex_to_BCD.axf'
+### ADS-LD Command File: 'Hex_to_BCD.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'Hex_to_BCD.lnp', Handle=0x00000E4C
+### Writing '.lnp' file
+### ADS-LD Command file 'Hex_to_BCD.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

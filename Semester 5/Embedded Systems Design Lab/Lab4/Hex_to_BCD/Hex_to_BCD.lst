@@ -1,0 +1,197 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, DATA, READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10010000        DCD              0x10010000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008         
+    8 00000008                 AREA             mycode, CODE, READONLY
+    9 00000000                 ENTRY
+   10 00000000                 EXPORT           Reset_Handler
+   11 00000000         
+   12 00000000         Reset_Handler
+   13 00000000 480F            LDR              R0, =SRC
+   14 00000002 6801            LDR              R1, [R0]
+   15 00000004         
+   16 00000004 F04F 0200       MOV              R2, #0
+   17 00000008         H_LOOP
+   18 00000008 2964            CMP              R1, #100
+   19 0000000A DB04            BLT              H_DONE
+   20 0000000C F1A1 0164       SUB              R1, R1, #100
+   21 00000010 F102 0201       ADD              R2, R2, #1
+   22 00000014 E7F8            B                H_LOOP
+   23 00000016         H_DONE
+   24 00000016         
+   25 00000016 F04F 0300       MOV              R3, #0
+   26 0000001A         T_LOOP
+   27 0000001A 290A            CMP              R1, #10
+   28 0000001C DB04            BLT              T_DONE
+   29 0000001E F1A1 010A       SUB              R1, R1, #10
+   30 00000022 F103 0301       ADD              R3, R3, #1
+   31 00000026 E7F8            B                T_LOOP
+   32 00000028         T_DONE
+   33 00000028         
+   34 00000028 EA4F 2402       LSL              R4, R2, #8
+   35 0000002C EA4F 1503       LSL              R5, R3, #4
+   36 00000030 EA44 0605       ORR              R6, R4, R5
+   37 00000034 EA46 0601       ORR              R6, R6, R1
+   38 00000038         
+   39 00000038 4F02            LDR              R7, =DST
+   40 0000003A 603E            STR              R6, [R7]
+   41 0000003C         
+   42 0000003C E7FE    Stop    B                Stop
+   43 0000003E         
+   44 0000003E 00 00 00000000 
+              00000000         AREA             mydata, DATA, READONLY
+   45 00000000 0000001A 
+                       SRC     DCD              0x0000001A
+   46 00000004         
+   47 00000004                 AREA             resultdata, DATA, READWRITE
+   48 00000000 00000000 
+                       DST     DCD              0
+   49 00000004         
+   50 00000004                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=Hex_to_B
+CD.d -oHex_to_BCD.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Kei
+l\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=Hex_to_BCD.lst Hex_to_
+BCD.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file Hex_to_BCD.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file Hex_to_BCD.s
+   Uses
+      At line 2 in file Hex_to_BCD.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+H_DONE 00000016
+
+Symbol: H_DONE
+   Definitions
+      At line 23 in file Hex_to_BCD.s
+   Uses
+      At line 19 in file Hex_to_BCD.s
+Comment: H_DONE used once
+H_LOOP 00000008
+
+Symbol: H_LOOP
+   Definitions
+      At line 17 in file Hex_to_BCD.s
+   Uses
+      At line 22 in file Hex_to_BCD.s
+Comment: H_LOOP used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 12 in file Hex_to_BCD.s
+   Uses
+      At line 5 in file Hex_to_BCD.s
+      At line 10 in file Hex_to_BCD.s
+
+Stop 0000003C
+
+Symbol: Stop
+   Definitions
+      At line 42 in file Hex_to_BCD.s
+   Uses
+      At line 42 in file Hex_to_BCD.s
+Comment: Stop used once
+T_DONE 00000028
+
+Symbol: T_DONE
+   Definitions
+      At line 32 in file Hex_to_BCD.s
+   Uses
+      At line 28 in file Hex_to_BCD.s
+Comment: T_DONE used once
+T_LOOP 0000001A
+
+Symbol: T_LOOP
+   Definitions
+      At line 26 in file Hex_to_BCD.s
+   Uses
+      At line 31 in file Hex_to_BCD.s
+Comment: T_LOOP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 8 in file Hex_to_BCD.s
+   Uses
+      None
+Comment: mycode unused
+7 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+SRC 00000000
+
+Symbol: SRC
+   Definitions
+      At line 45 in file Hex_to_BCD.s
+   Uses
+      At line 13 in file Hex_to_BCD.s
+Comment: SRC used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 44 in file Hex_to_BCD.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000000
+
+Symbol: DST
+   Definitions
+      At line 48 in file Hex_to_BCD.s
+   Uses
+      At line 39 in file Hex_to_BCD.s
+Comment: DST used once
+resultdata 00000000
+
+Symbol: resultdata
+   Definitions
+      At line 47 in file Hex_to_BCD.s
+   Uses
+      None
+Comment: resultdata unused
+2 symbols
+346 symbols in table
