@@ -1,0 +1,2 @@
+Dependencies for Project 'Hexa_2_ASCII', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Hexa_2_ASCII.S)(0x689AAF05)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\NXP\LPC17xx --list "Hexa_2_ASCII.lst" --xref -o "Hexa_2_ASCII.o" --depend "Hexa_2_ASCII.d")

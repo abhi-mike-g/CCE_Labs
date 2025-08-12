@@ -1,0 +1,156 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, DATA, READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         
+    4 00000000         __Vectors
+    5 00000000 10001000        DCD              0x10001000
+    6 00000004 00000000        DCD              Reset_Handler
+    7 00000008         
+    8 00000008                 ALIGN
+    9 00000008                 AREA             mycode, CODE, READONLY
+   10 00000000                 ENTRY
+   11 00000000                 EXPORT           Reset_Handler
+   12 00000000         
+   13 00000000         Reset_Handler
+   14 00000000         
+   15 00000000 F04F 0A08       MOV              R10, #8
+   16 00000004 4B09            LDR              R3, =DST
+   17 00000006 480A            LDR              R0, = SRC
+   18 00000008 6801            LDR              R1, [R0]
+   19 0000000A         
+   20 0000000A         UP
+   21 0000000A F001 020F       AND              R2, R1, 0X0F
+   22 0000000E 2909            CMP              R1, 0X09
+   23 00000010 D301            BCC              DW
+   24 00000012 F102 0207       ADD              R2, #0X07
+   25 00000016         
+   26 00000016         DW
+   27 00000016 F102 0230       ADD              R2, 0x30
+   28 0000001A F843 2B04       STR              R2, [R3], #4
+   29 0000001E 0909            LSRS             R1, R1, #4
+   30 00000020 F1BA 0A01       SUBS             R10, #1
+   31 00000024         
+   32 00000024 D1F1            BNE              UP
+   33 00000026         
+   34 00000026 E7FE    STOP    B                STOP
+   35 00000028         
+   36 00000028 1A2B3C4D 
+                       SRC     DCD              0X1A2B3C4D
+   37 0000002C         
+   38 0000002C 00000000 
+              00000000         AREA             mydata, DATA, READWRITE
+   39 00000000 00000000 
+                       DST     DCD              0
+                       
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=Hexa_2_A
+SCII.d -oHexa_2_ASCII.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:
+\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=Hexa_2_ASCII.lst H
+exa_2_ASCII.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file Hexa_2_ASCII.S
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 4 in file Hexa_2_ASCII.S
+   Uses
+      At line 2 in file Hexa_2_ASCII.S
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DW 00000016
+
+Symbol: DW
+   Definitions
+      At line 26 in file Hexa_2_ASCII.S
+   Uses
+      At line 23 in file Hexa_2_ASCII.S
+Comment: DW used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 13 in file Hexa_2_ASCII.S
+   Uses
+      At line 6 in file Hexa_2_ASCII.S
+      At line 11 in file Hexa_2_ASCII.S
+
+SRC 00000028
+
+Symbol: SRC
+   Definitions
+      At line 36 in file Hexa_2_ASCII.S
+   Uses
+      At line 17 in file Hexa_2_ASCII.S
+Comment: SRC used once
+STOP 00000026
+
+Symbol: STOP
+   Definitions
+      At line 34 in file Hexa_2_ASCII.S
+   Uses
+      At line 34 in file Hexa_2_ASCII.S
+Comment: STOP used once
+UP 0000000A
+
+Symbol: UP
+   Definitions
+      At line 20 in file Hexa_2_ASCII.S
+   Uses
+      At line 32 in file Hexa_2_ASCII.S
+Comment: UP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 9 in file Hexa_2_ASCII.S
+   Uses
+      None
+Comment: mycode unused
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000000
+
+Symbol: DST
+   Definitions
+      At line 39 in file Hexa_2_ASCII.S
+   Uses
+      At line 16 in file Hexa_2_ASCII.S
+Comment: DST used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 38 in file Hexa_2_ASCII.S
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+343 symbols in table
