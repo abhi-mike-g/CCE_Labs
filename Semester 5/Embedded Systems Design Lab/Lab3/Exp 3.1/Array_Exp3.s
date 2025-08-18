@@ -4,7 +4,7 @@ __Vectors
 	DCD 0X10001000
         DCD Reset_Handler
         ALIGN
-        AREA mycide, CODE, READONLY
+        AREA mycode, CODE, READONLY
         ENTRY
         EXPORT Reset_Handler
 Reset_Handler
@@ -24,3 +24,4 @@ STOP	B       STOP
 
         AREA READDATA, DATA, READWRITE
 SRC     DCD 0x15644621,0x15649653,0x15648643,0x15649531,0x15646879, 0x15660837,0x15647153,0x15646180,0x15649753,0x15646984
+
