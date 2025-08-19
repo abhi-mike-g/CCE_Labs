@@ -1,0 +1,2 @@
+Dependencies for Project 'Linear_Search', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Linear_Search.s)(0x68A3FCAA)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\NXP\LPC17xx --list "Linear_Search.lst" --xref -o "Linear_Search.o" --depend "Linear_Search.d")
