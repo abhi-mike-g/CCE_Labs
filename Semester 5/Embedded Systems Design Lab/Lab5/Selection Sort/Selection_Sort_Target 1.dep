@@ -1,0 +1,2 @@
+Dependencies for Project 'Selection_Sort', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Selection_Sort.s)(0x68A3E963)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\NXP\LPC17xx --list "Selection_Sort.lst" --xref -o "Selection_Sort.o" --depend "Selection_Sort.d")

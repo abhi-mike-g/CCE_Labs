@@ -1,0 +1,19 @@
+*** Creating Trace Output File 'Selection_Sort.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"selection_sort.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "selection_sort.o" 
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x10000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Selection_Sort.map" -o Selection_Sort.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'Selection_Sort.axf'
+### ADS-LD Command File: 'Selection_Sort.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'Selection_Sort.lnp', Handle=0x00000D3C
+### Writing '.lnp' file
+### ADS-LD Command file 'Selection_Sort.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
