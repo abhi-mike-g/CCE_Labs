@@ -1,0 +1,1 @@
+Factorial.o: Factorial.s
