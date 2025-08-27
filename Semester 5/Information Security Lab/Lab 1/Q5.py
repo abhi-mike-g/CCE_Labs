@@ -3,19 +3,41 @@
 # In the next chapter, the hero found a tablet in a cave with "XVIEWYWI" engraved on it. 
 # John immediately found the actual meaning of the ciphertext. Identify the type of attack and plaintext.
 
-def caesar_decrypt(ciphertext, shift):
-    return ''.join(chr((ord(c.lower()) - ord('a') - shift) % 26 + ord('a')) for c in ciphertext if c.isalpha())
+def letter_to_index(letter):
+    """Converts uppercase letter to 0-25 index."""
+    return ord(letter.upper()) - ord('A')
 
-def main():
-    sample_ct = "CIW"
-    sample_pt = "yes"
-    shift = (ord(sample_ct[0]) - ord(sample_pt[0])) % 26
+def index_to_letter(index):
+    """Converts 0-25 index to uppercase letter."""
+    return chr((index % 26) + ord('A'))
 
-    print("Detected Caesar shift:", shift)
+def find_shift(ciphertext, plaintext):
+    """Find the Caesar cipher shift from a known ciphertext/plaintext pair."""
+    shifts = []
+    for c, p in zip(ciphertext, plaintext):
+        shift = (letter_to_index(c) - letter_to_index(p)) % 26
+        shifts.append(shift)
+    return max(set(shifts), key=shifts.count)
 
-    tablet_ct = "XVIEWYWI"
-    plaintext = caesar_decrypt(tablet_ct, shift)
-    print("Decrypted tablet text:", plaintext)
+def decrypt_caesar(ciphertext, shift):
+    """Decrypt Caesar cipher with a given shift."""
+    plaintext = ''
+    for char in ciphertext:
+        if char.isalpha():
+            index = (letter_to_index(char) - shift) % 26
+            plaintext += index_to_letter(index)
+        else:
+            plaintext += char
+    return plaintext
 
-if __name__ == "__main__":
-    main()
+known_cipher = "CIW"
+known_plain = "yes"
+
+shift = find_shift(known_cipher, known_plain)
+print(f"Discovered Caesar shift: {shift}")
+
+cipher_to_decrypt = "XVIEWYWI"
+print(f"Message: {cipher_to_decrypt}")
+decrypted_text = decrypt_caesar(cipher_to_decrypt, shift)
+print(f"Decrypted text: {decrypted_text}")
+
