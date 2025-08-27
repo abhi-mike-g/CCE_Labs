@@ -3,6 +3,9 @@
 # In the next chapter, the hero found a tablet in a cave with "XVIEWYWI" engraved on it. 
 # John immediately found the actual meaning of the ciphertext. Identify the type of attack and plaintext.
 
+print("Known Cipher: CIW")
+print("Known Cipher: yes")
+
 def letter_to_index(letter):
     return ord(letter.upper()) - ord('A')
 
