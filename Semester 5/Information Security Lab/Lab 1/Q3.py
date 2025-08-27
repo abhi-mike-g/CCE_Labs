@@ -58,23 +58,6 @@ def playfair_encrypt_decrypt(message, key, mode='encrypt'):
 
     return "".join(result)
 
-def clean_decrypted_message(message):
-    cleaned = ""
-    i = 0
-    while i < len(message):
-        if (i < len(message) - 2 and 
-            message[i] == message[i+2] and 
-            message[i+1] == 'X'):
-            cleaned += message[i]
-            i += 2  # Skip the inserted 'X'
-        else:
-            cleaned += message[i]
-            i += 1
-    # Remove trailing 'X' if it was padding
-    if cleaned.endswith('X'):
-        cleaned = cleaned[:-1]
-    return cleaned
-
 # Example usage
 message = "The key is hidden under the door pad"
 key = "GUIDANCE"
@@ -87,5 +70,4 @@ print("\n")
 
 # Decrypt the message
 decrypted_message = playfair_encrypt_decrypt(encrypted_message, key, mode='decrypt')
-decrypted_message_clean = clean_decrypted_message(message)
-print("Decrypted Message: ", decrypted_message_clean)
+print("Decrypted Message: ", decrypted_message)
