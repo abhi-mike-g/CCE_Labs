@@ -4,15 +4,12 @@
 # John immediately found the actual meaning of the ciphertext. Identify the type of attack and plaintext.
 
 def letter_to_index(letter):
-    """Converts uppercase letter to 0-25 index."""
     return ord(letter.upper()) - ord('A')
 
 def index_to_letter(index):
-    """Converts 0-25 index to uppercase letter."""
     return chr((index % 26) + ord('A'))
 
 def find_shift(ciphertext, plaintext):
-    """Find the Caesar cipher shift from a known ciphertext/plaintext pair."""
     shifts = []
     for c, p in zip(ciphertext, plaintext):
         shift = (letter_to_index(c) - letter_to_index(p)) % 26
@@ -20,7 +17,6 @@ def find_shift(ciphertext, plaintext):
     return max(set(shifts), key=shifts.count)
 
 def decrypt_caesar(ciphertext, shift):
-    """Decrypt Caesar cipher with a given shift."""
     plaintext = ''
     for char in ciphertext:
         if char.isalpha():
