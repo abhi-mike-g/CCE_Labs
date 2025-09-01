@@ -16,7 +16,7 @@ Reset_Handler
         MOV R5, #10
         BL InsertionSort
 
-DONE    B DONE
+STOP B STOP        
 
 InsertionSort
         MOV R6, #1
@@ -56,3 +56,4 @@ FINISH  BX LR
 ARR     DCD 64, 25, 12, 22, 11, 5, 78, 90, 43, 2
 
         END
+
