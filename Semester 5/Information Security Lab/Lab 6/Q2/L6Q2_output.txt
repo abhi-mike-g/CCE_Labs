@@ -1,0 +1,21 @@
+"C:\Program Files\Python313\python.exe" "D:\230953232\IS Lab\230953232_AMG\Real Lab 1\diffie_hellman_aes_demo_Lab6Q2.py" 
+=== Diffie-Hellman + AES-GCM Demo ===
+Generating safe prime (this can take a moment)...
+Parameters: p bits = 512, q bits = 511, chosen g.
+
+Alice public A (hex prefix): 0x7a547c9611ed1c923885b714a23e38027d1b65a0039911ab5005030b776abf97bd6ec0973ef81c
+Bob public B (hex prefix): 0x3b3d7093f18f20a55a267b8f8899660d36f580b02058acff94039194d8dbe2fefa0266d7774e5d
+
+Shared integer equality: True
+Derived AES-256 key (SHA-256 of shared secret) (hex prefix): 8d4d20f8fdf3e501b63ff885fbf71e4183369262ec989c6df7b45d0d81d7ca32
+
+Plaintext: Send 55000 to Bob using Mastercard 3048-3303-3039-3783
+
+Ciphertext (hex prefix): 43aff84cc3475e15cdddc2e42e04cf97cb0e3d4bd06c306bee49b35431887a942ede250563ca97af
+Nonce (hex): 96614ab58183a0dce621f82e5edfa6df
+Tag (hex): d94fabfd0a7952dab04853e2e5cc8ff0
+Bob decrypted plaintext: Send 55000 to Bob using Mastercard 3048-3303-3039-3783
+
+Note: This DH exchange is unauthenticated — without signatures or trusted public keys, it's vulnerable to MitM.
+
+Process finished with exit code 0
