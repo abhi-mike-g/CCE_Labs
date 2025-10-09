@@ -1,0 +1,13 @@
+"C:\Program Files\Python313\python.exe" "D:\230953232\IS Lab\230953232_AMG\Real Lab 1\HomomorphicRSA_Lab7_Q2.py" 
+Public Key: (35611, 65537)
+Private Key: (35611, 22041)
+
+Ciphertext of 7: 2378
+Ciphertext of 3: 23797
+
+Encrypted Product (Ciphertext): 3387
+Decrypted Product: 21
+Expected Product: 21
+Verification: Match
+
+Process finished with exit code 0
