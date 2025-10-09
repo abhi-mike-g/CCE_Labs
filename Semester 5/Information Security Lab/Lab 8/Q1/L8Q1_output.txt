@@ -1,0 +1,121 @@
+"C:\Program Files\Python313\python.exe" "D:\230953232\IS Lab\230953232_AMG\Real Lab 1\Symmetric_Search_Encrypt.py" 
+
+Searchable Symmetric Encryption Demo
+=====================================
+1. Search a word in the encrypted index
+2. View available documents (IDs and text preview)
+3. Exit
+=====================================
+Enter your choice (1-3): 1
+
+Enter search word: cryptography
+
+Matching Document IDs (decrypted): [3]
+
+=== Matching Documents ===
+[Doc 3]: Cryptography ensures secure communication and privacy.
+
+Searchable Symmetric Encryption Demo
+=====================================
+1. Search a word in the encrypted index
+2. View available documents (IDs and text preview)
+3. Exit
+=====================================
+Enter your choice (1-3): 2
+
+Available Documents:
+[1] Artificial intelligence and machine learning are core technologie...
+[2] Data science overlaps with machine learning and statistics.
+[3] Cryptography ensures secure communication and privacy.
+[4] Searchable encryption allows encrypted search on private data.
+[5] Natural language processing helps computers understand humans.
+[6] Quantum computing challenges classical cryptographic systems.
+[7] Cybersecurity focuses on protecting computers and networks.
+[8] Cloud computing enables scalable data storage and computation.
+[9] Blockchain technology relies on cryptographic hash functions.
+[10] AI, ML, and DL are revolutionizing data-driven industries.
+
+Searchable Symmetric Encryption Demo
+=====================================
+1. Search a word in the encrypted index
+2. View available documents (IDs and text preview)
+3. Exit
+=====================================
+Enter your choice (1-3): 1
+
+Enter search word: data
+
+Matching Document IDs (decrypted): [2, 4, 8]
+
+=== Matching Documents ===
+[Doc 2]: Data science overlaps with machine learning and statistics.
+[Doc 4]: Searchable encryption allows encrypted search on private data.
+[Doc 8]: Cloud computing enables scalable data storage and computation.
+
+Searchable Symmetric Encryption Demo
+=====================================
+1. Search a word in the encrypted index
+2. View available documents (IDs and text preview)
+3. Exit
+=====================================
+Enter your choice (1-3): 2
+
+Available Documents:
+[1] Artificial intelligence and machine learning are core technologie...
+[2] Data science overlaps with machine learning and statistics.
+[3] Cryptography ensures secure communication and privacy.
+[4] Searchable encryption allows encrypted search on private data.
+[5] Natural language processing helps computers understand humans.
+[6] Quantum computing challenges classical cryptographic systems.
+[7] Cybersecurity focuses on protecting computers and networks.
+[8] Cloud computing enables scalable data storage and computation.
+[9] Blockchain technology relies on cryptographic hash functions.
+[10] AI, ML, and DL are revolutionizing data-driven industries.
+
+Searchable Symmetric Encryption Demo
+=====================================
+1. Search a word in the encrypted index
+2. View available documents (IDs and text preview)
+3. Exit
+=====================================
+Enter your choice (1-3): systems
+Invalid choice. Please enter 1, 2, or 3.
+
+Searchable Symmetric Encryption Demo
+=====================================
+1. Search a word in the encrypted index
+2. View available documents (IDs and text preview)
+3. Exit
+=====================================
+Enter your choice (1-3): 1
+
+Enter search word: systems
+
+Matching Document IDs (decrypted): [6]
+
+=== Matching Documents ===
+[Doc 6]: Quantum computing challenges classical cryptographic systems.
+
+Searchable Symmetric Encryption Demo
+=====================================
+1. Search a word in the encrypted index
+2. View available documents (IDs and text preview)
+3. Exit
+=====================================
+Enter your choice (1-3): 1
+
+Enter search word: embedded
+
+No matching documents found for: embedded
+
+Searchable Symmetric Encryption Demo
+=====================================
+1. Search a word in the encrypted index
+2. View available documents (IDs and text preview)
+3. Exit
+=====================================
+Enter your choice (1-3): 3
+
+Exiting the SSE Demo. Goodbye!
+
+Process finished with exit code 0
