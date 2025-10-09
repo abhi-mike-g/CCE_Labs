@@ -1,0 +1,13 @@
+"C:\Program Files\Python313\python.exe" "D:\230953232\IS Lab\230953232_AMG\Real Lab 1\Paillier_Lab7_Q1.py" 
+Public Key: (47941, 47942)
+Private Key: (4750, 33700)
+
+Ciphertext of 15: 2019928943
+Ciphertext of 25: 943648991
+
+Encrypted Sum (Ciphertext): 2188670090
+Decrypted Sum: 40
+Expected Sum: 40
+Verification: ✅ Match
+
+Process finished with exit code 0
