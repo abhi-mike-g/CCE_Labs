@@ -1,0 +1,41 @@
+Here is a realistic combined transcript that you should see in the two terminals when you run the program exactly as shipped (512-bit primes).
+
+------------------------------------------------------------
+Terminal 1 – start the server
+------------------------------------------------------------
+$ python client_server_demo.py server
+Server starting.  Generating DH/Schnorr params…
+Server parameters generated: p bits 512, q bits 511
+Listening on 127.0.0.1:6000 … (awaiting one client)
+
+------------------------------------------------------------
+Terminal 2 – start the client a second later
+------------------------------------------------------------
+$ python client_server_demo.py client
+Client starting.  Generating DH/Schnorr keys…
+Schnorr public y (hex prefix): 0x7e0b9f3c…
+Connected to server.
+Received B from server (hex prefix): 0x1a4c6e8b…
+Derived AES key (hex prefix): 3f72a9e1…
+Schnorr signature (e,s): (1234…, 5678…)
+Server response: {'status': 'processed', 'signature_valid': True}
+
+------------------------------------------------------------
+Back in the server terminal
+------------------------------------------------------------
+Client connected: ('127.0.0.1', 52342)
+Received A from client (hex prefix): 0x3f5a8c12…
+Sent B to client (hex prefix): 0x1a4c6e8b…
+Derived AES key (hex prefix): 3f72a9e1…
+Decrypted plaintext: Send 55000 to Bob using Mastercard 3048-3303-3039-3783
+Schnorr signature valid?: True
+Connection closed.
+
+------------------------------------------------------------
+New file created in the working directory
+------------------------------------------------------------
+$ cat merchant_log.json
+{"timestamp": 1697434412.123, "plaintext": "Send 55000 to Bob using Mastercard 3048-3303-3039-3783", "signature_valid": true, "client_pub_y": "7e0b9f3c…"}
+(plus a trailing newline)
+
+That’s the entire visible output; the program then exits on both sides.
