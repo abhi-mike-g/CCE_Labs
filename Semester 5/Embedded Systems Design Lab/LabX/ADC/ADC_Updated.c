@@ -75,4 +75,3 @@ int main(void){
         lcd_print_number(diff);
     }
 }
-\
