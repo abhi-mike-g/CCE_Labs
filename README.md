@@ -3,25 +3,26 @@ The programs written through the Bachelor of Technology in Computer and Communic
 
 ## Semester 3
 
-### Data Structures Lab
+### Data Structures (DS) Lab
 
-### Digital System Design Lab
+### Digital System Logic Design (DSLD) Lab
 
-### Object Oriented Programming Lab
+### Object Oriented Programming (OOP) Lab
 
 ## Semester 4
 
 ### Database Management Systems (DBMS) Lab
 
-### Operating Systems Lab
+### Operating Systems (OS) Lab
 
 ## Semester 5
 
 ### Information Security Lab
 
-### Embedded Systems Design Lab
+### Embedded Systems Design (ESD) Lab
 
 ## Semester 6
 
-### Network Design and Programming Lab
+### Network Design & Programming (NDP) Lab
 
+### Mobile Application & Development (MAD) Lab
