@@ -1,6 +1,6 @@
 # CCE Labs
 <p align="justify">
-The programs written through the Bachelor of Technology in Computer and Communication engineering Laboratory programs conducted by the <a href="https://www.manipal.edu/mit/department-faculty/department-list/school-of-computer-engineering.html">School of Computer Engineering</a> (formerly Department of Information and Communication Technology) from semesters 3 onwards at <a href="https://www.manipal.edu/mit.html">Manipal Institute of Technology</a>, a constituent unit of <a href="https://www.manipal.edu/mu.html">Manipai Academy of Higher Education</a>
+The programs written through the Bachelor of Technology in Computer and Communication engineering (Now updated to Computer Science and Engineering with specialization in Networks and IoT) Laboratory programs conducted by the <a href="https://www.manipal.edu/mit/department-faculty/department-list/school-of-computer-engineering.html">School of Computer Engineering</a> (formerly Department of Information and Communication Technology) from semesters 3 onwards at <a href="https://www.manipal.edu/mit.html">Manipal Institute of Technology</a>, a constituent unit of <a href="https://www.manipal.edu/mu.html">Manipai Academy of Higher Education</a>
 </p>
 
 ## Semester 3
